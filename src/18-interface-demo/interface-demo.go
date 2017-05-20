@@ -60,4 +60,10 @@ func main() {
 	//Casting to Animal!  --> If that works, it means Dog implements interface Animal
 	c := Animal(cow)
 	fmt.Println("c.Speak():", c.Speak())
+
+	animalSplice := []Animal{dog, cat, cow}
+
+	for i, animal := range animalSplice {
+		fmt.Printf("\n%v : %v\n", i, animal)
+	}
 }
