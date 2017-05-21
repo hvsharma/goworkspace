@@ -9,6 +9,8 @@ import (
 func main() {
 	root, _ := filepath.Abs(".")
 	fmt.Println("Processing Directory:", root)
+
+	//Note that we are passing a function processPath just like a type...!
 	err := filepath.Walk(root, processPath)
 	if err != nil {
 		fmt.Println("Errors:", err)
